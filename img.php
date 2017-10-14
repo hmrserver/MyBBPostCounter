@@ -34,6 +34,7 @@ $url="https://post4vps.com/search.php?action=finduser&uid=".$_GET["userid"];
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Must be set to true so that PHP follows any "Location:" header
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
